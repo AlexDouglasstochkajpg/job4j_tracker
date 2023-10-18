@@ -6,9 +6,9 @@ public class Broken {
 
     private int emptySize = 10;
 
-    public String surname;
+    private String surname;
 
-    public String name;
+    private String name;
 
     public Broken() { }
 
