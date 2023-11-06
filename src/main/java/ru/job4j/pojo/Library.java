@@ -15,6 +15,7 @@ public class Library {
             Book lib = books[i];
             System.out.println(lib.getName() + " : " + lib.getNumber());
         }
+
         System.out.println();
         Book temp = books[0];
         books[0] = chem;
@@ -23,6 +24,7 @@ public class Library {
             Book lib = books[i];
             System.out.println(lib.getName() + " : " + lib.getNumber());
         }
+
         System.out.println();
         for (int i = 1; i < books.length; i++) {
             if (books[i].getName().equals("Clean code")) {
