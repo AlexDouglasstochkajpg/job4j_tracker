@@ -9,5 +9,6 @@ public class Bus implements Vehicle {
     @Override
     public void accommodate() {
         System.out.println(getClass().getSimpleName() + " вмещает не более 50 пассажиров");
+
     }
 }

@@ -9,5 +9,6 @@ public class Train implements Vehicle {
     @Override
     public void accommodate() {
         System.out.println(getClass().getSimpleName() + " вмещает более 500 пассажиров");
+
     }
 }
