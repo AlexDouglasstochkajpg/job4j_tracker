@@ -2,12 +2,11 @@ package ru.job4j.tracker;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.*;
 
-class StartUITest {
+public class StartUITest {
     @Test
-    void whenAddItem() {
+    public void whenAddItem() {
         String[] answers = {"Fix PC"};
         Input input = new MockInput(answers);
         Tracker tracker = new Tracker();
