@@ -4,9 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class StartUITest {
+class StartUITest {
+
     @Test
-    public void whenAddItem() {
+    void whenAddItem() {
         String[] answers = {"Fix PC"};
         Input input = new MockInput(answers);
         Tracker tracker = new Tracker();
