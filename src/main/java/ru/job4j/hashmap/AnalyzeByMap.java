@@ -52,25 +52,20 @@ public class AnalyzeByMap {
             list.add(new Label(pupil.name(), score));
             score = 0;
         }
-        list.sort(Comparator.naturalOrder());
-        return list.get(list.size() - 1);
+        return Collections.max(list);
     }
 
     public static Label bestSubject(List<Pupil> pupils) {
         Map<String, Integer> map = new LinkedHashMap<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                map.putIfAbsent(subject.name(), 0);
-                if (map.containsKey(subject.name())) {
-                    map.replace(subject.name(), map.get(subject.name()) + subject.score());
-                }
+                map.put(subject.name(), map.getOrDefault(subject.name(), 0) + subject.score());
             }
         }
         List<Label> list = new ArrayList<>();
         for (String subjectName : map.keySet()) {
             list.add(new Label(subjectName, (double) map.get(subjectName)));
         }
-        list.sort(Comparator.naturalOrder());
-        return list.get(list.size() - 1);
+        return Collections.max(list);
     }
 }
