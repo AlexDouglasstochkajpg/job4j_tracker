@@ -32,7 +32,6 @@ public class FunctionalInterfaces {
         Function<String, String> function = (string1) -> string1.toUpperCase();
         for (String string : strings) {
             consumer.accept(function.apply(string));
-            System.out.println(string.toUpperCase());
         }
     }
 }
