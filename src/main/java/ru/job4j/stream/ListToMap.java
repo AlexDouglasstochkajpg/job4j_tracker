@@ -11,7 +11,7 @@ public class ListToMap {
         return list.stream()
                 .collect(Collectors.toMap(
                         Student::getSurname,
-                        x -> new Student(x.getScore(), x.getSurname()),
+                        x -> x,
                         (existing, replacement) -> existing
                 ));
     }
