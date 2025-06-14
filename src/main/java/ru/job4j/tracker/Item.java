@@ -17,6 +17,7 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String name;
 
     private LocalDateTime created = LocalDateTime.now().withNano(0);
