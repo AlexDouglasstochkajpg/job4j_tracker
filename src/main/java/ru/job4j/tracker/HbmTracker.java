@@ -17,6 +17,9 @@ public class HbmTracker implements Store, AutoCloseable {
     private final SessionFactory sf = new MetadataSources(registry)
             .buildMetadata().buildSessionFactory();
 
+    public HbmTracker(SessionFactory sessionFactory, StandardServiceRegistry registry) {
+    }
+
     @Override
     public Item add(Item item) {
         transactionVoid(session -> session.save(item));
