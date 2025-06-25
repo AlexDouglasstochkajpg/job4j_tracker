@@ -101,4 +101,5 @@ public class HbmTrackerTest {
         tracker.findAll().forEach(item -> tracker.delete(item.getId()));
         assertThat(tracker.findAll()).isEmpty();
     }
+
 }
