@@ -123,4 +123,5 @@ public class HbmTrackerTest {
         Item found = tracker.findById(item.getId());
         assertThat(found).isEqualTo(item);
     }
+
 }
